@@ -60,7 +60,7 @@
     list-style: none;
   }
   
-  button {
+  button { /*버튼의 기본적인 틀을 조정한거*/
     background-color: transparent;
     cursor: pointer;
     border: none;
@@ -124,3 +124,31 @@
   .navbar__menu__item:hover{
       background-color: #aec1eb; 
   }
+
+  /* Home */
+  #home{
+      background: url(imgs/p.jpg) center/cover no-repeat; /*center가운데 cover반응형 norepeat반복안하게*/
+      padding: 40px;/*전반적인 홈 화면 위아래 패딩*/
+      text-align: center;/*모든 아이템 중간 정렬*/
+    }
+  .home__avatar{
+      width: 250px;
+      height: 250px;
+      border-radius:50%;
+      border: 2px solid lavenderblush;/*사진 테두리 경계주고 채우기*/
+  }
+  .home__title,
+  .home__description{
+      color: var(--color-white);
+  }
+  .home__contact{
+      font-size: var(--font-regular);
+      font-weight: var(--weight-bold);
+      margin: 24px;
+      padding: 8px 12px;
+      border: 2px solid lavenderblush;
+      border-radius: 4px;
+      color: #4f1152;
+  }
+
+    
