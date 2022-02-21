@@ -281,7 +281,7 @@
   }
   .category__btn{
       border: 1px solid #f02182;
-      border-radius: var(--size-border-radius);/
+      border-radius: var(--size-border-radius);
       font-size: var(--font-regular);
       padding: 8px 48px;
   }
