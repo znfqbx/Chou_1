@@ -125,6 +125,15 @@
       background-color: #aec1eb; 
   }
 
+  .navbar__toogle-btn{
+      position: absolute;/*기존의 위치에서 빠져나오기*/
+      top: 22px;
+      right: 32px;
+      font-size: 24px;
+      color: var(--color-light-white);
+      display: none;/*평소에는 보이면 안되기 때문에*/
+  }
+
   /* Home */
   #home{
       background: url(imgs/p.jpg) center/cover no-repeat; /*center가운데 cover반응형 norepeat반복안하게*/
@@ -431,3 +440,44 @@
       transform: scale(1.1);
       color: #b90e86;
   }
+
+  /* For below 768px screen width*/
+  @media screen and (max-width: 768px){
+      .navbar__toogle-btn{
+          display: block;
+      }
+      #navbar{
+          flex-direction: column;/*위에서 아래로 수직형태*//*수평 반대쪽에서 정리할때는 align items*/
+          align-items: flex-start;
+      }
+      .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+      } 
+      .about__majors{
+          flex-direction: column;
+      }
+      .major__icon{
+          margin: auto;
+      }
+
+      .major {
+          margin-bottom: 38px;
+      }
+
+      .skillset{
+          flex-direction: column;
+      }
+
+      .project{
+          flex-grow: 1;
+      }
+
+      .testimonial__avatar{
+          width: 80px;
+          height: 80px;
+      }
+  } 
+  
