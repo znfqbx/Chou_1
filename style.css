@@ -134,7 +134,7 @@
       border-color: var(--color-white);
   }
 
-  .navbar__toogle-btn{
+  .navbar__toggle-btn{
       position: absolute;/*기존의 위치에서 빠져나오기*/
       top: 22px;
       right: 32px;
@@ -384,17 +384,19 @@
       opacity: 0.8;
       transform: translateY(0px);/*살짜쿵 올리면 슉슉슉*/
   }
+
   .project__description h3{
-      color: var(--color-light-white);
+      color: var(--color-orange);
   }
+
   .project__description h3:after{
       content: '';
       display: block;/*한줄에 하나씩*/
       position: relative;
       left: 50%;
-      width: 25px;
+      width: 50px;
       height: 2px;
-      margin-left: -12px;
+      transform: translateX(-50%);
       margin-top: 8px;
       background-color: var(--color-dark-white);
   }
@@ -487,13 +489,18 @@
 
   /* For below 768px screen width*/
   @media screen and (max-width: 768px){
-      .navbar__toogle-btn{
+      .navbar__toggle-btn{
           display: block;
-          margin-top:-10px; 
+          margin-top: -2px;
       }
       #navbar{
           flex-direction: column;/*위에서 아래로 수직형태*//*수평 반대쪽에서 정리할때는 align items*/
           align-items: flex-start;
+          background-color: #df92b8;
+          opacity: 95%;
+      }
+      #navbar.navbar--dark{
+          padding: 14px;
       }
       .navbar__menu{
         flex-direction: column;
@@ -501,6 +508,9 @@
         width: 100%;
         display: none;
       } 
+      .navbar__menu.open {
+          display: block;
+      }
       .about__majors{
           flex-direction: column;
       }
